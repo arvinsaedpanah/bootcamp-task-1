@@ -1,0 +1,151 @@
+/* Rest */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* ROOT */
+
+:root {
+  --color-secondary: #234894;
+  --color-headings: #234894;
+  --color-primary: #219f95;
+  --color-primary-ligth: #afcedd;
+  --color-header: #000;
+  --color-body: #696969;
+  --color-white: #fff;
+}
+a {
+  color: inherit;
+  font-size: 1.4rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-body);
+  font-size: 1.4rem;
+}
+h1,
+h2,
+h3 {
+  color: var(--color-header);
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--color-body);
+}
+/* app */
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  margin: 2rem;
+  column-gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  height: auto;
+}
+.app-header {
+  margin: 5rem;
+  color: var(--color-header);
+}
+.app-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+/* button */
+
+.btn.btn--primary {
+  color: var(--color-secondary);
+  background-color: var(--color-primary-ligth);
+  border: 1px solid var(--color-primary-ligth);
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
+.btn.btn--secondary {
+  display: flex;
+  justify-content: center;
+  margin-right: 39%;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  border-radius: 5px;
+  width: 20%;
+  height: 5rem;
+}
+/* location */
+.location {
+  padding: 2rem;
+}
+.location a {
+  color: var(--color-secondary);
+}
+
+/* form */
+
+.form__image {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.form__image img {
+  width: 40px;
+  height: auto;
+}
+.form__image p {
+  color: var(--color-header);
+}
+/* media screen */
+
+@media screen and (min-width: 768px) {
+  .app-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  a {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .app-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  a {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  .btn.btn--secondary {
+    margin-right: 32%;
+  }
+}
